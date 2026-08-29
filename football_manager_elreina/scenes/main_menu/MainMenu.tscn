@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root_scene type="Control" version="4.2">
+	<node name="MainMenu" type="Control">
+		<property name="Layout Mode" value="3" />
+		<property name="Anchors Layout" value="1" />
+		<property name="mouse_filter" value="2" />
+		<property name="theme" value="res://assets/themes/MainTheme.tres" />
+		
+		<node name="Background" type="ColorRect">
+			<property name="Layout Mode" value="3" />
+			<property name="Anchors Layout" value="1" />
+			<property name="color" value="#080C14" />
+		</node>
+		
+		<node name="VBoxContainer" type="VBoxContainer">
+			<property name="Layout Mode" value="1" />
+			<property name="offset_left" value="760.0" />
+			<property name="offset_top" value="340.0" />
+			<property name="offset_right" value="1160.0" />
+			<property name="offset_bottom" value="740.0" />
+			<property name="theme_override_constants/separation" value="20" />
+			<property name="alignment" value="1" />
+			
+			<node name="Title" type="Label">
+				<property name="Layout Mode" value="2" />
+				<property name="text" value="Football Manager" />
+				<property name="horizontal_alignment" value="1" />
+				<property name="theme_override_font_sizes/font_size" value="48" />
+				<property name="theme_override_colors/font_color" value="#FFFFFF" />
+			</node>
+			
+			<node name="Subtitle" type="Label">
+				<property name="Layout Mode" value="2" />
+				<property name="text" value="Elreina Edition" />
+				<property name="horizontal_alignment" value="1" />
+				<property name="theme_override_font_sizes/font_size" value="32" />
+				<property name="theme_override_colors/font_color" value="#1E90FF" />
+			</node>
+			
+			<node name="Spacer" type="Control">
+				<property name="Layout Mode" value="2" />
+				<property name="custom_minimum_size" value="0, 40" />
+			</node>
+			
+			<node name="NewGameButton" type="Button">
+				<property name="Layout Mode" value="2" />
+				<property name="custom_minimum_size" value="300, 60" />
+				<property name="text" value="New Game" />
+				<property name="theme_override_font_sizes/font_size" value="24" />
+			</node>
+			
+			<node name="LoadGameButton" type="Button">
+				<property name="Layout Mode" value="2" />
+				<property name="custom_minimum_size" value="300, 60" />
+				<property name="text" value="Load Game" />
+				<property name="theme_override_font_sizes/font_size" value="24" />
+			</node>
+			
+			<node name="SettingsButton" type="Button">
+				<property name="Layout Mode" value="2" />
+				<property name="custom_minimum_size" value="300, 60" />
+				<property name="text" value="Settings" />
+				<property name="theme_override_font_sizes/font_size" value="24" />
+			</node>
+			
+			<node name="CreditsButton" type="Button">
+				<property name="Layout Mode" value="2" />
+				<property name="custom_minimum_size" value="300, 60" />
+				<property name="text" value="Credits" />
+				<property name="theme_override_font_sizes/font_size" value="24" />
+			</node>
+			
+			<node name="QuitButton" type="Button">
+				<property name="Layout Mode" value="2" />
+				<property name="custom_minimum_size" value="300, 60" />
+				<property name="text" value="Quit" />
+				<property name="theme_override_font_sizes/font_size" value="24" />
+			</node>
+		</node>
+		
+		<node name="VersionLabel" type="Label">
+			<property name="Layout Mode" value="1" />
+			<property name="offset_left" value="20.0" />
+			<property name="offset_top" value="1040.0" />
+			<property name="offset_right" value="200.0" />
+			<property name="offset_bottom" value="1060.0" />
+			<property name="text" value="Version 1.0.0" />
+			<property name="theme_override_colors/font_color" value="#B0B0B0" />
+		</node>
+	</node>
+	
+	<connections>
+		<connection from="MainMenu/NewGameButton" to="../MainMenu" signal="pressed" method="_on_new_game_pressed" />
+		<connection from="MainMenu/LoadGameButton" to="../MainMenu" signal="pressed" method="_on_load_game_pressed" />
+		<connection from="MainMenu/QuitButton" to="../MainMenu" signal="pressed" method="_on_quit_pressed" />
+	</connections>
+</root_scene>

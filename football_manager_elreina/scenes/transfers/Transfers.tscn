@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scene type="Control" version="4.2">
+  <node name="TransfersScene" type="Control">
+    <property name="layout_mode" type="int">3</property>
+    <property name="anchors_preset" type="int">15</property>
+    <property name="anchor_right" type="float">1</property>
+    <property name="anchor_bottom" type="float">1</property>
+    <property name="grow_horizontal" type="int">2</property>
+    <property name="grow_vertical" type="int">2</property>
+    <node name="MarginContainer" type="MarginContainer">
+      <property name="layout_mode" type="int">1</property>
+      <property name="anchors_preset" type="15</property>
+      <property name="anchor_right" type="float">1</property>
+      <property name="anchor_bottom" type="float">1</property>
+      <property name="grow_horizontal" type="int">2</property>
+      <property name="grow_vertical" type="int">2</property>
+      <property name="theme_override_constants/margin_left" type="int">20</property>
+      <property name="theme_override_constants/margin_top" type="int">20</property>
+      <property name="theme_override_constants/margin_right" type="int">20</property>
+      <property name="theme_override_constants/margin_bottom" type="int">20</property>
+      <node name="VBoxContainer" type="VBoxContainer">
+        <property name="layout_mode" type="int">2</property>
+        <node name="HeaderPanel" type="PanelContainer">
+          <property name="layout_mode" type="int">2</property>
+          <property name="custom_minimum_size" type="Vector2">0,60</property>
+          <node name="HBoxContainer" type="HBoxContainer">
+            <property name="layout_mode" type="int">2</property>
+            <property name="theme_override_constants/separation" type="int">30</property>
+            <node name="Title" type="Label">
+              <property name="layout_mode" type="int">2</property>
+              <property name="text" type="String">⚽ Transfer Market</property>
+              <property name="theme_override_font_sizes/font_size" type="int">28</property>
+            </node>
+            <node name="TransferBudgetLabel" type="Label">
+              <property name="layout_mode" type="int">2</property>
+              <property name="text" type="String">Transfer Budget: £5.00M</property>
+              <property name="theme_override_font_sizes/font_size" type="int">18</property>
+            </node>
+            <node name="WageBudgetLabel" type="Label">
+              <property name="layout_mode" type="int">2</property>
+              <property name="text" type="String">Weekly Wage Budget: £150K</property>
+              <property name="theme_override_font_sizes/font_size" type="int">18</property>
+            </node>
+          </node>
+        </node>
+        <node name="SearchPanel" type="PanelContainer">
+          <property name="layout_mode" type="int">2</property>
+          <property name="custom_minimum_size" type="Vector2">0,70</property>
+          <node name="HBoxContainer" type="HBoxContainer">
+            <property name="layout_mode" type="int">2</property>
+            <property name="theme_override_constants/separation" type="int">15</property>
+            <node name="SearchLabel" type="Label">
+              <property name="layout_mode" type="int">2</property>
+              <property name="text" type="String">Search:</property>
+            </node>
+            <node name="SearchBox" type="LineEdit">
+              <property name="layout_mode" type="int">2</property>
+              <property name="size_flags_horizontal" type="int">3</property>
+              <property name="placeholder_text" type="String">Enter player name...</property>
+            </node>
+            <node name="PositionFilter" type="OptionButton">
+              <property name="layout_mode" type="int">2</property>
+              <property name="custom_minimum_size" type="Vector2">150,0</property>
+            </node>
+            <node name="TransferTypeFilter" type="OptionButton">
+              <property name="layout_mode" type="int">2</property>
+              <property name="custom_minimum_size" type="Vector2">180,0</property>
+            </node>
+          </node>
+        </node>
+        <node name="PlayersListContainer" type="PanelContainer">
+          <property name="layout_mode" type="int">2</property>
+          <property name="size_flags_vertical" type="int">3</property>
+          <node name="ScrollContainer" type="ScrollContainer">
+            <property name="layout_mode" type="int">2</property>
+            <property name="anchors_preset" type="15</property>
+            <property name="anchor_right" type="float">1</property>
+            <property name="anchor_bottom" type="float">1</property>
+            <property name="grow_horizontal" type="int">2</property>
+            <property name="grow_vertical" type="int">2</property>
+            <node name="PlayersList" type="VBoxContainer">
+              <property name="layout_mode" type="int">2</property>
+            </node>
+          </node>
+        </node>
+        <node name="BackButton" type="Button">
+          <property name="layout_mode" type="int">2</property>
+          <property name="custom_minimum_size" type="Vector2">150,40</property>
+          <property name="text" type="String">← Back to Dashboard</property>
+          <property name="theme_override_font_sizes/font_size" type="int">16</property>
+        </node>
+      </node>
+    </node>
+  </node>
+</scene>

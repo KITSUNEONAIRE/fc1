@@ -303,6 +303,53 @@ func generate_players() -> void:
 	for i in range(player_count):
 		var player = generate_single_player(i)
 		GameState.players.append(player)
+	
+	# Assign players to teams
+	assign_players_to_teams()
+	
+	# Generate additional free agents
+	generate_free_agents()
+
+
+func assign_players_to_teams() -> void:
+	# Distribute players among teams (18-25 players per team)
+	for team in GameState.teams:
+		var squad_size = 18 + randi() % 8  # 18-25 players
+		var assigned_count = 0
+		
+		for player in GameState.players:
+			if assigned_count >= squad_size:
+				break
+			if player["team_id"] == -1:  # Not assigned yet
+				player["team_id"] = team["id"]
+				assigned_count += 1
+
+
+func generate_free_agents() -> void:
+	# Generate 50-100 free agents (players without team)
+	var free_agent_count = 50 + randi() % 51
+	
+	for i in range(free_agent_count):
+		var player = generate_single_player(GameState.players.size())
+		player["team_id"] = -1  # Mark as free agent
+		player["is_free_agent"] = true
+		GameState.players.append(player)
+
+
+func get_free_agents() -> Array:
+	var free_agents = []
+	for player in GameState.players:
+		if player.get("team_id", -1) == -1 or player.get("is_free_agent", false):
+			free_agents.append(player)
+	return free_agents
+
+
+func get_team_squad(team_id: int) -> Array:
+	var squad = []
+	for player in GameState.players:
+		if player.get("team_id", -1) == team_id:
+			squad.append(player)
+	return squad
 
 
 func generate_single_player(index: int) -> Dictionary:

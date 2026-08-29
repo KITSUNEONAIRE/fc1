@@ -36,10 +36,14 @@ func _setup_signals() -> void:
 	
 	# Setup navigation buttons
 	$NavPanel/VBoxContainer/TeamBtn.pressed.connect(_on_team_pressed)
+	$NavPanel/VBoxContainer/TacticsBtn.pressed.connect(_on_tactics_pressed)
+	$NavPanel/VBoxContainer/TransfersBtn.pressed.connect(_on_transfers_pressed)
 	$NavPanel/VBoxContainer/MapBtn.pressed.connect(_on_map_pressed)
 	$NavPanel/VBoxContainer/FinancesBtn.pressed.connect(_on_finances_pressed)
 	$NavPanel/VBoxContainer/PoliticsBtn.pressed.connect(_on_politics_pressed)
 	$NavPanel/VBoxContainer/FansBtn.pressed.connect(_on_fans_pressed)
+	$NavPanel/VBoxContainer/MedicalBtn.pressed.connect(_on_medical_pressed)
+	$NavPanel/VBoxContainer/PressBtn.pressed.connect(_on_press_pressed)
 	$NavPanel/VBoxContainer/ShopBtn.pressed.connect(_on_shop_pressed)
 	$NavPanel/VBoxContainer/MenuBtn.pressed.connect(_on_menu_pressed)
 

@@ -282,3 +282,31 @@ func end_season() -> void:
 	current_week = 1
 	# Age players, reset stats, etc.
 	state_changed.emit()
+
+
+func get_player_club() -> Dictionary:
+	return player_club
+
+
+func set_player_club(club: Dictionary) -> void:
+	player_club = club
+	state_changed.emit()
+
+
+func get_team_by_id(team_id: int) -> Dictionary:
+	for team in teams:
+		if team.get("id", -1) == team_id:
+			return team.duplicate()
+	return {}
+
+
+func get_all_teams() -> Array:
+	return teams.duplicate()
+
+
+func get_players_by_team(team_id: int) -> Array:
+	return WorldGenerator.get_team_squad(team_id)
+
+
+func get_available_free_agents() -> Array:
+	return WorldGenerator.get_free_agents()

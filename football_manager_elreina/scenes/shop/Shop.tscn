@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scene type="Control" version="4.2">
+  <node name="ShopScene" type="Control">
+    <property name="layout_mode" type="int">3</property>
+    <property name="anchors_preset" type="int">15</property>
+    <property name="anchor_right" type="float">1</property>
+    <property name="anchor_bottom" type="float">1</property>
+    <property name="grow_horizontal" type="int">2</property>
+    <property name="grow_vertical" type="int">2</property>
+    <node name="MarginContainer" type="MarginContainer">
+      <property name="layout_mode" type="int">1</property>
+      <property name="anchors_preset" type="15</property>
+      <property name="anchor_right" type="float">1</property>
+      <property name="anchor_bottom" type="float">1</property>
+      <property name="grow_horizontal" type="int">2</property>
+      <property name="grow_vertical" type="int">2</property>
+      <property name="theme_override_constants/margin_left" type="int">20</property>
+      <property name="theme_override_constants/margin_top" type="int">20</property>
+      <property name="theme_override_constants/margin_right" type="int">20</property>
+      <property name="theme_override_constants/margin_bottom" type="int">20</property>
+      <node name="VBoxContainer" type="VBoxContainer">
+        <property name="layout_mode" type="int">2</property>
+        <node name="HeaderPanel" type="PanelContainer">
+          <property name="layout_mode" type="int">2</property>
+          <property name="custom_minimum_size" type="Vector2">0,60</property>
+          <node name="PPLabel" type="Label">
+            <property name="layout_mode" type="int">2</property>
+            <property name="text" type="String">Prestige Points: 500</property>
+            <property name="theme_override_font_sizes/font_size" type="int">24</property>
+            <property name="theme_override_colors/font_color" type="Color">#ffd700ff</property>
+          </node>
+        </node>
+        <node name="Title" type="Label">
+          <property name="layout_mode" type="int">2</property>
+          <property name="text" type="String">⭐ Prestige Shop</property>
+          <property name="theme_override_font_sizes/font_size" type="int">28</property>
+        </node>
+        <node name="HSeparator" type="HSeparator">
+          <property name="layout_mode" type="int">2</property>
+        </node>
+        <node name="ItemsContainer" type="PanelContainer">
+          <property name="layout_mode" type="int">2</property>
+          <property name="size_flags_vertical" type="int">3</property>
+          <node name="ScrollContainer" type="ScrollContainer">
+            <property name="layout_mode" type="int">2</property>
+            <property name="anchors_preset" type="15</property>
+            <property name="anchor_right" type="float">1</property>
+            <property name="anchor_bottom" type="float">1</property>
+            <property name="grow_horizontal" type="int">2</property>
+            <property name="grow_vertical" type="int">2</property>
+            <node name="ItemsList" type="VBoxContainer">
+              <property name="layout_mode" type="int">2</property>
+            </node>
+          </node>
+        </node>
+        <node name="BackButton" type="Button">
+          <property name="layout_mode" type="int">2</property>
+          <property name="custom_minimum_size" type="Vector2">150,40</property>
+          <property name="text" type="String">← Back to Dashboard</property>
+          <property name="theme_override_font_sizes/font_size" type="int">16</property>
+        </node>
+      </node>
+    </node>
+  </node>
+</scene>

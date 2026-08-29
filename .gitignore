@@ -1,38 +1,52 @@
 ```
 # Godot-specific ignores
 *.import
-*.uid
+*.remap
 .project
-*.scn
-*.tscn
-*.tres
-*.res
-*.godot
+.editor
+.autoload.gd
+.godot/
 
-# Build artifacts
-export_presets.cfg
+# Compiled and build artifacts
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.out
 
-# Editor
-.vscode/
-.idea/
+# Dependencies
+node_modules/
+venv/
+.venv/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+target/
+.gradle/
 
-# Dependencies and cache
-.cache/
-*.cache
-*.tmp
-
-# Logs
+# Logs and temp files
 *.log
+*.tmp
+*.swp
+*.swo
 
 # Environment
 .env
 .env.local
 *.env.*
 
-# OS generated files
+# Editors
+.vscode/
+.idea/
+
+# Coverage
+coverage/
+htmlcov/
+.coverage
+
+# System files
 .DS_Store
 Thumbs.db
-```node_modules/
-.next/
-dist/
-build/
+```
