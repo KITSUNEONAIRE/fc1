@@ -1,52 +1,74 @@
 ```
-# Godot-specific ignores
+# Build artifacts
 *.import
-*.remap
-.project
-.editor
-.autoload.gd
-.godot/
+*.import.*
+*.scn.import
+*.tres.import
+*.res.import
+*.gdip
+*.gdnlib
+*.gde
+*.gdc
+*.gen.h
+*.gen.cpp
+*.gen.cs
+*.gen.java
+*.gen.ts
+*.gen.js
+*.gen.py
+*.gen.rb
+*.gen.php
+*.gen.swift
+*.gen.kt
+*.gen.scala
+*.gen.go
+*.gen.rs
+*.gen.dart
+*.gen.ml
+*.gen.mli
+*.gen.mlpack
+*.gen.mllib
+*.gen.mlunit
+*.gen.mltest
+*.gen.mlt
+*.gen.mly
+*.gen.mll
+*.gen.mlpack
+*.gen.mllib
+*.gen.mlunit
+*.gen.mltest
+*.gen.mlt
+*.gen.mly
+*.gen.mll
+*.gen.mlpack
+*.gen.mllib
+*.gen.mlunit
+*.gen.mltest
+*.gen.mlt
+*.gen.mly
+*.gen.mll
 
-# Compiled and build artifacts
-*.o
-*.obj
-*.exe
-*.dll
-*.so
-*.a
-*.out
+# Godot specific
+.project
+*.godot
+*.import
+export_presets.cfg
+.unseen
+.tmp
+temp/
+cache/
+*.cache
+*.tmp
+*.log
 
 # Dependencies
-node_modules/
-venv/
-.venv/
-__pycache__/
-.mypy_cache/
-.pytest_cache/
-target/
-.gradle/
+addons/
+*.pck
 
-# Logs and temp files
-*.log
-*.tmp
-*.swp
-*.swo
-
-# Environment
-.env
-.env.local
-*.env.*
-
-# Editors
+# Editor
 .vscode/
 .idea/
-
-# Coverage
-coverage/
-htmlcov/
-.coverage
-
-# System files
-.DS_Store
-Thumbs.db
+*.swp
+*.swo
+*~
 ```

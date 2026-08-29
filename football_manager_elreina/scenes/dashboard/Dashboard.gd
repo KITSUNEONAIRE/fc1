@@ -134,6 +134,18 @@ func _on_team_pressed() -> void:
 		print("Error loading team scene: ", err)
 
 
+func _on_tactics_pressed() -> void:
+	var err = get_tree().change_scene_to_file("res://scenes/tactics/Tactics.tscn")
+	if err != OK:
+		print("Error loading tactics scene: ", err)
+
+
+func _on_transfers_pressed() -> void:
+	var err = get_tree().change_scene_to_file("res://scenes/transfers/Transfers.tscn")
+	if err != OK:
+		print("Error loading transfers scene: ", err)
+
+
 func _on_map_pressed() -> void:
 	var err = get_tree().change_scene_to_file("res://scenes/map/WorldMap.tscn")
 	if err != OK:
@@ -158,8 +170,20 @@ func _on_fans_pressed() -> void:
 		print("Error loading fans scene: ", err)
 
 
+func _on_medical_pressed() -> void:
+	var err = get_tree().change_scene_to_file("res://scenes/medical/Medical.tscn")
+	if err != OK:
+		print("Error loading medical scene: ", err)
+
+
+func _on_press_pressed() -> void:
+	var err = get_tree().change_scene_to_file("res://scenes/press/Press.tscn")
+	if err != OK:
+		print("Error loading press scene: ", err)
+
+
 func _on_shop_pressed() -> void:
-	var err = get_tree().change_scene_to_file("res://scenes/shop/PrestigeShop.tscn")
+	var err = get_tree().change_scene_to_file("res://scenes/shop/Shop.tscn")
 	if err != OK:
 		print("Error loading shop scene: ", err)
 
