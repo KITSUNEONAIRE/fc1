@@ -1,1 +1,24 @@
-Nothing should be ignored based on the provided file changes. The only modified file is a source code file (.gd) which should not be ignored.
+```
+# Godot-specific ignores
+*.import
+*.remap
+.project
+.ios/
+.android/
+.windows/
+.linuxbsd/
+.macos/
+export_presets.cfg
+user://
+
+# Dependencies
+addons/
+
+# Logs and temp files
+*.log
+*.tmp
+
+# System files
+.DS_Store
+Thumbs.db
+```
