@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root_scene type="Control" version="4.2">
+<node name="Team" type="Control">
+<property name="Layout Mode" value="3" />
+<property name="Anchors Layout" value="1" />
+
+<node name="Background" type="ColorRect">
+<property name="Layout Mode" value="3" />
+<property name="Anchors Layout" value="1" />
+<property name="color" value="#080C14" />
+</node>
+
+<node name="BackButton" type="Button">
+<property name="Layout Mode" value="1" />
+<property name="offset_left" value="20.0" />
+<property name="offset_top" value="20.0" />
+<property name="offset_right" value="150.0" />
+<property name="offset_bottom" value="60.0" />
+<property name="text" value="← Back" />
+</node>
+
+<node name="TitleLabel" type="Label">
+<property name="Layout Mode" value="1" />
+<property name="offset_left" value="200.0" />
+<property name="offset_top" value="20.0" />
+<property name="offset_right" value="400.0" />
+<property name="offset_bottom" value="60.0" />
+<property name="text" value="Team Squad" />
+<property name="theme_override_font_sizes/font_size" value="32" />
+<property name="theme_override_colors/font_color" value="#FFFFFF" />
+</node>
+
+<node name="PlayerList" type="ItemList">
+<property name="Layout Mode" value="1" />
+<property name="offset_left" value="20.0" />
+<property name="offset_top" value="100.0" />
+<property name="offset_right" value="1900.0" />
+<property name="offset_bottom" value="1000.0" />
+</node>
+</node>
+
+<connections>
+<connection from="Team/BackButton" to="../Team" signal="pressed" method="_on_back_pressed" />
+</connections>
+</root_scene>

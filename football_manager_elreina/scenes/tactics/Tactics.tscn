@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scene type="Control" version="4.2">
+  <node name="TacticsScene" type="Control">
+    <property name="layout_mode" type="int">3</property>
+    <property name="anchors_preset" type="int">15</property>
+    <property name="anchor_right" type="float">1</property>
+    <property name="anchor_bottom" type="float">1</property>
+    <property name="grow_horizontal" type="int">2</property>
+    <property name="grow_vertical" type="int">2</property>
+    <node name="MarginContainer" type="MarginContainer">
+      <property name="layout_mode" type="int">1</property>
+      <property name="anchors_preset" type="15</property>
+      <property name="anchor_right" type="float">1</property>
+      <property name="anchor_bottom" type="float">1</property>
+      <property name="grow_horizontal" type="int">2</property>
+      <property name="grow_vertical" type="int">2</property>
+      <property name="theme_override_constants/margin_left" type="int">20</property>
+      <property name="theme_override_constants/margin_top" type="int">20</property>
+      <property name="theme_override_constants/margin_right" type="int">20</property>
+      <property name="theme_override_constants/margin_bottom" type="int">20</property>
+      <node name="VBoxContainer" type="VBoxContainer">
+        <property name="layout_mode" type="int">2</property>
+        <node name="Title" type="Label">
+          <property name="layout_mode" type="int">2</property>
+          <property name="text" type="String">⚽ Tactics &amp; Formation</property>
+          <property name="theme_override_font_sizes/font_size" type="int">28</property>
+        </node>
+        <node name="HSeparator" type="HSeparator">
+          <property name="layout_mode" type="int">2</property>
+        </node>
+        <node name="MainHBox" type="HBoxContainer">
+          <property name="layout_mode" type="int">2</property>
+          <property name="size_flags_horizontal" type="int">3</property>
+          <node name="LeftPanel" type="PanelContainer">
+            <property name="layout_mode" type="int">0</property>
+            <property name="size_flags_horizontal" type="int">1</property>
+            <property name="custom_minimum_size" type="Vector2">300</property>
+            <node name="VBoxContainer" type="VBoxContainer">
+              <property name="layout_mode" type="int">2</property>
+              <property name="theme_override_constants/separation" type="int">15</property>
+              <node name="FormationLabel" type="Label">
+                <property name="layout_mode" type="int">2</property>
+                <property name="text" type="String">Formation</property>
+                <property name="theme_override_font_sizes/font_size" type="int">18</property>
+              </node>
+              <node name="FormationButtons" type="VBoxContainer">
+                <property name="layout_mode" type="int">2</property>
+                <property name="theme_override_constants/separation" type="int">8</property>
+              </node>
+              <node name="StyleLabel" type="Label">
+                <property name="layout_mode" type="int">2</property>
+                <property name="text" type="String">Playing Style</property>
+                <property name="theme_override_font_sizes/font_size" type="int">18</property>
+              </node>
+              <node name="StyleButtons" type="VBoxContainer">
+                <property name="layout_mode" type="int">2</property>
+                <property name="theme_override_constants/separation" type="int">8</property>
+              </node>
+            </node>
+          </node>
+          <node name="CenterPanel" type="PanelContainer">
+            <property name="layout_mode" type="int">0</property>
+            <property name="size_flags_horizontal" type="int">2</property>
+            <property name="custom_minimum_size" type="Vector2">500</property>
+            <node name="VBoxContainer" type="VBoxContainer">
+              <property name="layout_mode" type="int">2</property>
+              <property name="theme_override_constants/separation" type="int">10</property>
+              <node name="LineupLabel" type="Label">
+                <property name="layout_mode" type="int">2</property>
+                <property name="text" type="String">Current Lineup</property>
+                <property name="theme_override_font_sizes/font_size" type="int">18</property>
+              </node>
+              <node name="LineupContainer" type="GridContainer">
+                <property name="layout_mode" type="int">2</property>
+                <property name="size_flags_vertical" type="int">3</property>
+                <property name="columns" type="int">5</property>
+              </node>
+            </node>
+          </node>
+          <node name="RightPanel" type="PanelContainer">
+            <property name="layout_mode" type="int">0</property>
+            <property name="size_flags_horizontal" type="int">1</property>
+            <property name="custom_minimum_size" type="Vector2">250</property>
+            <node name="VBoxContainer" type="VBoxContainer">
+              <property name="layout_mode" type="int">2</property>
+              <property name="theme_override_constants/separation" type="int">10</property>
+              <node name="TacticsInfo" type="Label">
+                <property name="layout_mode" type="int">2</property>
+                <property name="text" type="String">Formation: 4-4-2 | Style: Balanced
+Team Chemistry: 75%</property>
+                <property name="theme_override_font_sizes/font_size" type="int">14</property>
+              </node>
+              <node name="StatsLabel" type="Label">
+                <property name="layout_mode" type="int">2</property>
+                <property name="text" type="String">Team Stats:</property>
+                <property name="theme_override_font_sizes/font_size" type="int">16</property>
+              </node>
+              <node name="AttackStat" type="Label">
+                <property name="layout_mode" type="int">2</property>
+                <property name="text" type="String">Attack: 72</property>
+              </node>
+              <node name="DefenseStat" type="Label">
+                <property name="layout_mode" type="int">2</property>
+                <property name="text" type="String">Defense: 68</property>
+              </node>
+              <node name="MidfieldStat" type="Label">
+                <property name="layout_mode" type="int">2</property>
+                <property name="text" type="String">Midfield: 70</property>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node name="BackButton" type="Button">
+          <property name="layout_mode" type="int">2</property>
+          <property name="custom_minimum_size" type="Vector2">150</property>
+          <property name="text" type="String">← Back to Dashboard</property>
+          <property name="theme_override_font_sizes/font_size" type="int">16</property>
+        </node>
+      </node>
+    </node>
+  </node>
+</scene>

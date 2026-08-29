@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root_scene type="Control" version="4.2">
+	<node name="WorldMap" type="Control">
+		<property name="Layout Mode" value="3" />
+		<property name="Anchors Layout" value="1" />
+		
+		<node name="Background" type="ColorRect">
+			<property name="Layout Mode" value="3" />
+			<property name="Anchors Layout" value="1" />
+			<property name="color" value="#080C14" />
+		</node>
+		
+		<!-- Map Container -->
+		<node name="MapContainer" type="Control">
+			<property name="Layout Mode" value="1" />
+			<property name="offset_left" value="100.0" />
+			<property name="offset_top" value="50.0" />
+			<property name="offset_right" value="1700.0" />
+			<property name="offset_bottom" value="950.0" />
+		</node>
+		
+		<!-- Region Info Panel -->
+		<node name="RegionInfoPanel" type="PanelContainer">
+			<property name="Layout Mode" value="1" />
+			<property name="offset_left" value="1720.0" />
+			<property name="offset_top" value="50.0" />
+			<property name="offset_right" value="1900.0" />
+			<property name="offset_bottom" value="400.0" />
+			<property name="visible" value="false" />
+			
+			<node name="VBoxContainer" type="VBoxContainer">
+				<property name="Layout Mode" value="1" />
+				<property name="offset_left" value="10.0" />
+				<property name="offset_top" value="10.0" />
+				<property name="offset_right" value="170.0" />
+				<property name="offset_bottom" value="340.0" />
+				
+				<node name="RegionName" type="Label">
+					<property name="Layout Mode" value="2" />
+					<property name="text" value="Region Name" />
+					<property name="theme_override_font_sizes/font_size" value="20" />
+					<property name="theme_override_colors/font_color" value="#FFFFFF" />
+				</node>
+				
+				<node name="RegionClimate" type="Label">
+					<property name="Layout Mode" value="2" />
+					<property name="text" value="Climate: " />
+					<property name="theme_override_colors/font_color" value="#B0B0B0" />
+				</node>
+				
+				<node name="RegionParty" type="Label">
+					<property name="Layout Mode" value="2" />
+					<property name="text" value="Ruling Party: " />
+					<property name="theme_override_colors/font_color" value="#B0B0B0" />
+				</node>
+				
+				<node name="RegionTension" type="Label">
+					<property name="Layout Mode" value="2" />
+					<property name="text" value="Tension: " />
+					<property name="theme_override_colors/font_color" value="#B0B0B0" />
+				</node>
+				
+				<node name="RegionStyle" type="Label">
+					<property name="Layout Mode" value="2" />
+					<property name="text" value="Football Style: " />
+					<property name="theme_override_colors/font_color" value="#B0B0B0" />
+				</node>
+			</node>
+		</node>
+		
+		<!-- Legend -->
+		<node name="LegendContainer" type="PanelContainer">
+			<property name="Layout Mode" value="1" />
+			<property name="offset_left" value="20.0" />
+			<property name="offset_top" value="700.0" />
+			<property name="offset_right" value="300.0" />
+			<property name="offset_bottom" value="950.0" />
+			
+			<node name="VBoxContainer" type="VBoxContainer">
+				<property name="Layout Mode" value="1" />
+				<property name="offset_left" value="10.0" />
+				<property name="offset_top" value="10.0" />
+				<property name="offset_right" value="270.0" />
+				<property name="offset_bottom" value="240.0" />
+			</node>
+		</node>
+		
+		<!-- Back Button -->
+		<node name="BackButton" type="Button">
+			<property name="Layout Mode" value="1" />
+			<property name="offset_left" value="20.0" />
+			<property name="offset_top" value="20.0" />
+			<property name="offset_right" value="150.0" />
+			<property name="offset_bottom" value="60.0" />
+			<property name="text" value="← Back to Dashboard" />
+		</node>
+	</node>
+	
+	<connections>
+		<connection from="WorldMap/BackButton" to="../WorldMap" signal="pressed" method="_on_back_pressed" />
+		<connection from="WorldMap/MapContainer" to="../WorldMap" signal="gui_input" method="_on_MapContainer_gui_input" />
+	</connections>
+</root_scene>

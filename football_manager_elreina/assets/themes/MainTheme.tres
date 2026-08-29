@@ -1,0 +1,23 @@
+[gd_resource type="Theme" script_class="Theme" load_steps=2 format=3 uid="uid://main_theme"]
+
+[resource]
+
+default_font = null
+default_font_size = 16
+
+[color]
+
+font_color = Color(1, 1, 1, 1)
+font_hover_color = Color(0.118, 0.565, 1, 1)
+font_pressed_color = Color(1, 0.843, 0, 1)
+
+[font_sizes]
+
+font_size = 16
+
+[styles]
+
+"Button" = null
+"Label" = null
+"Panel" = null
+"PanelContainer" = null
