@@ -145,14 +145,14 @@ func generate_single_region(index: int) -> Dictionary:
 func generate_region_polygon(index: int, rng: RandomNumberGenerator) -> PackedVector2Array:
 	var polygon = PackedVector2Array()
 	var center_x = (index % 4) * 400 + 200
-	var center_y = (index / 4) * 300 + 150
+	var center_y = int(float(index) / 4.0) * 300 + 150
 	
 	var num_points = rng.randi_range(4, 8)
 	var radius = rng.randi_range(80, 120)
 	
 	for i in range(num_points):
-		var angle = (TWO_PI / num_points) * i + rng.randf() * 0.3
-		var r = radius * (0.8 + rng.randf() * 0.4)
+		var angle = (TAU / float(num_points)) * float(i) + rng.randf() * 0.3
+		var r = float(radius) * (0.8 + rng.randf() * 0.4)
 		var x = center_x + cos(angle) * r
 		var y = center_y + sin(angle) * r
 		polygon.append(Vector2(x, y))
@@ -175,15 +175,15 @@ func generate_single_city(index: int) -> Dictionary:
 	rng.seed = index + 100
 	
 	var region_index = rng.randi() % GameState.regions.size()
-	var region = GameState.regions[region_index]
+	# var _region = GameState.regions[region_index] # Не используется, закомментировано
 	
 	var is_capital = (index == 0)
 	
-	var name = generate_city_name(rng)
+	var city_name = generate_city_name(rng) # Переименовано чтобы избежать shadowing
 	
 	return {
 		"id": index,
-		"name": name,
+		"name": city_name,
 		"region_id": region_index,
 		"is_capital": is_capital,
 		"population": rng.randi_range(50000, 2000000) if not is_capital else rng.randi_range(2000000, 5000000),
@@ -446,9 +446,9 @@ func get_random_position(rng: RandomNumberGenerator) -> String:
 	return positions[rng.randi() % positions.size()]
 
 
-func generate_skills(rng: RandomNumberGenerator, region: Dictionary, age: int, position: String) -> Dictionary:
+func generate_skills(rng: RandomNumberGenerator, region: Dictionary, _age: int, _position: String) -> Dictionary:
 	var base = 40 + rng.randi_range(0, 40)
-	var style_bonus = get_style_bonus(region.football_style, position)
+	var style_bonus = get_style_bonus(region.football_style, _position)
 	
 	var skills = {
 		"attacking": clamp(base + rng.randi_range(-10, 20) + style_bonus.attack, 1, 99),
@@ -461,14 +461,14 @@ func generate_skills(rng: RandomNumberGenerator, region: Dictionary, age: int, p
 		"goalkeeping": 0
 	}
 	
-	if position == "GK":
+	if _position == "GK":
 		skills.goalkeeping = clamp(50 + rng.randi_range(0, 40), 1, 99)
 		skills.attacking = 10 + rng.randi_range(0, 20)
 	
 	return skills
 
 
-func get_style_bonus(style: String, position: String) -> Dictionary:
+func get_style_bonus(style: String, _position: String) -> Dictionary:
 	var bonuses = {
 		"attacking": {"attack": 10, "defense": -5, "passing": 5, "shooting": 10, "physical": 0},
 		"defensive": {"attack": -5, "defense": 10, "passing": 0, "shooting": -5, "physical": 5},

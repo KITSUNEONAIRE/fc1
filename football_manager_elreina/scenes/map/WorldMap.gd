@@ -110,7 +110,7 @@ func _draw_tension_pulse(region: Dictionary, center: Vector2) -> void:
 	
 	var points = PackedVector2Array()
 	for i in range(16):
-		var angle = (TWO_PI / 16) * i
+		var angle = (TAU / 16.0) * float(i)
 		points.append(center + Vector2(cos(angle), sin(angle)) * pulse_radius)
 	
 	var pulse_color = Color.RED
