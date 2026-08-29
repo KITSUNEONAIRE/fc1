@@ -3,28 +3,27 @@
 	<node name="Dashboard" type="Control">
 		<property name="Layout Mode" value="3" />
 		<property name="Anchors Layout" value="1" />
-		
+
 		<node name="Background" type="ColorRect">
 			<property name="Layout Mode" value="3" />
 			<property name="Anchors Layout" value="1" />
 			<property name="color" value="#080C14" />
 		</node>
-		
-		<!-- Top Bar -->
+
 		<node name="TopBar" type="PanelContainer">
 			<property name="Layout Mode" value="1" />
 			<property name="offset_left" value="0.0" />
 			<property name="offset_top" value="0.0" />
 			<property name="offset_right" value="1920.0" />
 			<property name="offset_bottom" value="80.0" />
-			
+
 			<node name="HBoxContainer" type="HBoxContainer">
 				<property name="Layout Mode" value="1" />
 				<property name="offset_left" value="20.0" />
 				<property name="offset_top" value="20.0" />
 				<property name="offset_right" value="1900.0" />
 				<property name="offset_bottom" value="60.0" />
-				
+
 				<node name="ClubName" type="Label">
 					<property name="Layout Mode" value="2" />
 					<property name="custom_minimum_size" value="300, 0" />
@@ -32,38 +31,38 @@
 					<property name="theme_override_font_sizes/font_size" value="28" />
 					<property name="theme_override_colors/font_color" value="#FFFFFF" />
 				</node>
-				
+
 				<node name="Spacer1" type="Control">
 					<property name="Layout Mode" value="2" />
 					<property name="size_flags_horizontal" value="3" />
 				</node>
-				
+
 				<node name="DateLabel" type="Label">
 					<property name="Layout Mode" value="2" />
 					<property name="text" value="1st August 1997" />
 					<property name="theme_override_font_sizes/font_size" value="20" />
 					<property name="theme_override_colors/font_color" value="#1E90FF" />
 				</node>
-				
+
 				<node name="WeekLabel" type="Label">
 					<property name="Layout Mode" value="2" />
 					<property name="text" value="Week 1/38" />
 					<property name="theme_override_font_sizes/font_size" value="20" />
 					<property name="theme_override_colors/font_color" value="#B0B0B0" />
 				</node>
-				
+
 				<node name="Spacer2" type="Control">
 					<property name="Layout Mode" value="2" />
 					<property name="custom_minimum_size" value="40, 0" />
 				</node>
-				
+
 				<node name="PrestigeLabel" type="Label">
 					<property name="Layout Mode" value="2" />
 					<property name="text" value="PP: 0" />
 					<property name="theme_override_font_sizes/font_size" value="20" />
 					<property name="theme_override_colors/font_color" value="#FFD700" />
 				</node>
-				
+
 				<node name="MoneyLabel" type="Label">
 					<property name="Layout Mode" value="2" />
 					<property name="text" value="£0" />
@@ -72,101 +71,98 @@
 				</node>
 			</node>
 		</node>
-		
-		<!-- Navigation Panel -->
+
 		<node name="NavPanel" type="PanelContainer">
 			<property name="Layout Mode" value="1" />
 			<property name="offset_left" value="0.0" />
 			<property name="offset_top" value="80.0" />
 			<property name="offset_right" value="250.0" />
 			<property name="offset_bottom" value="1080.0" />
-			
+			<property name="theme_override_styles/panel" value="null" />
+
 			<node name="VBoxContainer" type="VBoxContainer">
 				<property name="Layout Mode" value="1" />
-				<property name="offset_left" value="10.0" />
-				<property name="offset_top" value="10.0" />
-				<property name="offset_right" value="240.0" />
-				<property name="offset_bottom" value="1070.0" />
+				<property name="offset_left" value="20.0" />
+				<property name="offset_top" value="20.0" />
+				<property name="offset_right" value="230.0" />
+				<property name="offset_bottom" value="1060.0" />
 				<property name="theme_override_constants/separation" value="10" />
-				
-				<node name="DashboardBtn" type="Button">
+
+				<node name="AdvanceWeekBtn" type="Button">
 					<property name="Layout Mode" value="2" />
-					<property name="custom_minimum_size" value="220, 50" />
-					<property name="text" value="📊 Dashboard" />
+					<property name="custom_minimum_size" value="220, 60" />
+					<property name="text" value="▶ Advance Week" />
+					<property name="theme_override_font_sizes/font_size" value="20" />
 				</node>
-				
+
+				<node name="HSeparator1" type="HSeparator">
+					<property name="Layout Mode" value="2" />
+				</node>
+
 				<node name="TeamBtn" type="Button">
 					<property name="Layout Mode" value="2" />
 					<property name="custom_minimum_size" value="220, 50" />
 					<property name="text" value="👥 Team" />
 				</node>
-				
+
 				<node name="TacticsBtn" type="Button">
 					<property name="Layout Mode" value="2" />
 					<property name="custom_minimum_size" value="220, 50" />
 					<property name="text" value="⚽ Tactics" />
 				</node>
-				
+
 				<node name="TransfersBtn" type="Button">
 					<property name="Layout Mode" value="2" />
 					<property name="custom_minimum_size" value="220, 50" />
 					<property name="text" value="🔄 Transfers" />
 				</node>
-				
+
 				<node name="FinancesBtn" type="Button">
 					<property name="Layout Mode" value="2" />
 					<property name="custom_minimum_size" value="220, 50" />
 					<property name="text" value="💰 Finances" />
 				</node>
-				
+
 				<node name="MapBtn" type="Button">
 					<property name="Layout Mode" value="2" />
 					<property name="custom_minimum_size" value="220, 50" />
 					<property name="text" value="🗺️ Map" />
 				</node>
-				
+
 				<node name="PoliticsBtn" type="Button">
 					<property name="Layout Mode" value="2" />
 					<property name="custom_minimum_size" value="220, 50" />
 					<property name="text" value="🏛️ Politics" />
 				</node>
-				
+
 				<node name="FansBtn" type="Button">
 					<property name="Layout Mode" value="2" />
 					<property name="custom_minimum_size" value="220, 50" />
 					<property name="text" value="👮 Fans" />
 				</node>
-				
+
 				<node name="MedicalBtn" type="Button">
 					<property name="Layout Mode" value="2" />
 					<property name="custom_minimum_size" value="220, 50" />
 					<property name="text" value="🏥 Medical" />
 				</node>
-				
+
 				<node name="PressBtn" type="Button">
 					<property name="Layout Mode" value="2" />
 					<property name="custom_minimum_size" value="220, 50" />
 					<property name="text" value="📰 Press" />
 				</node>
-				
+
 				<node name="ShopBtn" type="Button">
 					<property name="Layout Mode" value="2" />
 					<property name="custom_minimum_size" value="220, 50" />
 					<property name="text" value="⭐ Shop (PP)" />
 				</node>
-				
-				<node name="Spacer" type="Control">
+
+				<node name="HSeparator2" type="HSeparator">
 					<property name="Layout Mode" value="2" />
-					<property name="size_flags_vertical" value="3" />
 				</node>
-				
-				<node name="AdvanceWeekBtn" type="Button">
-					<property name="Layout Mode" value="2" />
-					<property name="custom_minimum_size" value="220, 60" />
-					<property name="text" value="▶ Advance Week" />
-					<property name="theme_override_colors/font_color" value="#32CD32" />
-				</node>
-				
+
 				<node name="MenuBtn" type="Button">
 					<property name="Layout Mode" value="2" />
 					<property name="custom_minimum_size" value="220, 50" />
@@ -174,47 +170,45 @@
 				</node>
 			</node>
 		</node>
-		
-		<!-- Main Content Area -->
-		<node name="ContentArea" type="PanelContainer">
+
+		<node name="ContentArea" type="MarginContainer">
 			<property name="Layout Mode" value="1" />
 			<property name="offset_left" value="250.0" />
 			<property name="offset_top" value="80.0" />
 			<property name="offset_right" value="1920.0" />
 			<property name="offset_bottom" value="1080.0" />
-			
+			<property name="theme_override_constants/margin_left" value="20" />
+			<property name="theme_override_constants/margin_top" value="20" />
+			<property name="theme_override_constants/margin_right" value="20" />
+			<property name="theme_override_constants/margin_bottom" value="20" />
+
 			<node name="MarginContainer" type="MarginContainer">
 				<property name="Layout Mode" value="1" />
-				<property name="offset_left" value="10.0" />
-				<property name="offset_top" value="10.0" />
-				<property name="offset_right" value="1660.0" />
-				<property name="offset_bottom" value="990.0" />
-				<property name="theme_override_constants/margin_left" value="20" />
-				<property name="theme_override_constants/margin_top" value="20" />
-				<property name="theme_override_constants/margin_right" value="20" />
-				<property name="theme_override_constants/margin_bottom" value="20" />
-				
+				<property name="offset_left" value="20.0" />
+				<property name="offset_top" value="20.0" />
+				<property name="offset_right" value="1650.0" />
+				<property name="offset_bottom" value="980.0" />
+
 				<node name="DashboardContent" type="VBoxContainer">
-					<property name="Layout Mode" value="1" />
-					
+					<property name="Layout Mode" value="2" />
+					<property name="offset_left" value="20.0" />
+					<property name="offset_top" value="20.0" />
+					<property name="offset_right" value="1630.0" />
+					<property name="offset_bottom" value="960.0" />
+					<property name="theme_override_constants/separation" value="20" />
+
 					<node name="WelcomeLabel" type="Label">
 						<property name="Layout Mode" value="2" />
 						<property name="text" value="Welcome to Football Manager: Elreina Edition" />
 						<property name="theme_override_font_sizes/font_size" value="32" />
 						<property name="theme_override_colors/font_color" value="#FFFFFF" />
 					</node>
-					
-					<node name="StatusLabel" type="Label">
-						<property name="Layout Mode" value="2" />
-						<property name="text" value="Season 1 - Week 1" />
-						<property name="theme_override_font_sizes/font_size" value="24" />
-						<property name="theme_override_colors/font_color" value="#1E90FF" />
-					</node>
-					
+
 					<node name="GridContainer" type="GridContainer">
 						<property name="Layout Mode" value="2" />
+						<property name="custom_minimum_size" value="0, 300" />
 						<property name="columns" value="2" />
-						
+
 						<node name="BoardTrustLabel" type="Label">
 							<property name="Layout Mode" value="2" />
 							<property name="text" value="Board Trust:" />
@@ -225,7 +219,7 @@
 							<property name="text" value="50%" />
 							<property name="theme_override_colors/font_color" value="#FFFFFF" />
 						</node>
-						
+
 						<node name="FanRelationsLabel" type="Label">
 							<property name="Layout Mode" value="2" />
 							<property name="text" value="Fan Relations:" />
@@ -236,7 +230,7 @@
 							<property name="text" value="50%" />
 							<property name="theme_override_colors/font_color" value="#FFFFFF" />
 						</node>
-						
+
 						<node name="MediaRelationsLabel" type="Label">
 							<property name="Layout Mode" value="2" />
 							<property name="text" value="Media Relations:" />
@@ -247,7 +241,7 @@
 							<property name="text" value="50%" />
 							<property name="theme_override_colors/font_color" value="#FFFFFF" />
 						</node>
-						
+
 						<node name="StateRelationsLabel" type="Label">
 							<property name="Layout Mode" value="2" />
 							<property name="text" value="State Relations:" />
@@ -259,14 +253,14 @@
 							<property name="theme_override_colors/font_color" value="#FFFFFF" />
 						</node>
 					</node>
-					
+
 					<node name="NotificationsLabel" type="Label">
 						<property name="Layout Mode" value="2" />
 						<property name="text" value="Recent Notifications:" />
 						<property name="theme_override_font_sizes/font_size" value="20" />
 						<property name="theme_override_colors/font_color" value="#FFFFFF" />
 					</node>
-					
+
 					<node name="NotificationsList" type="ItemList">
 						<property name="Layout Mode" value="2" />
 						<property name="custom_minimum_size" value="0, 200" />
@@ -275,9 +269,19 @@
 			</node>
 		</node>
 	</node>
-	
+
 	<connections>
 		<connection from="Dashboard/NavPanel/VBoxContainer/AdvanceWeekBtn" to="../Dashboard" signal="pressed" method="_on_advance_week_pressed" />
+		<connection from="Dashboard/NavPanel/VBoxContainer/TeamBtn" to="../Dashboard" signal="pressed" method="_on_team_pressed" />
+		<connection from="Dashboard/NavPanel/VBoxContainer/TacticsBtn" to="../Dashboard" signal="pressed" method="_on_tactics_pressed" />
+		<connection from="Dashboard/NavPanel/VBoxContainer/TransfersBtn" to="../Dashboard" signal="pressed" method="_on_transfers_pressed" />
+		<connection from="Dashboard/NavPanel/VBoxContainer/FinancesBtn" to="../Dashboard" signal="pressed" method="_on_finances_pressed" />
+		<connection from="Dashboard/NavPanel/VBoxContainer/MapBtn" to="../Dashboard" signal="pressed" method="_on_map_pressed" />
+		<connection from="Dashboard/NavPanel/VBoxContainer/PoliticsBtn" to="../Dashboard" signal="pressed" method="_on_politics_pressed" />
+		<connection from="Dashboard/NavPanel/VBoxContainer/FansBtn" to="../Dashboard" signal="pressed" method="_on_fans_pressed" />
+		<connection from="Dashboard/NavPanel/VBoxContainer/MedicalBtn" to="../Dashboard" signal="pressed" method="_on_medical_pressed" />
+		<connection from="Dashboard/NavPanel/VBoxContainer/PressBtn" to="../Dashboard" signal="pressed" method="_on_press_pressed" />
+		<connection from="Dashboard/NavPanel/VBoxContainer/ShopBtn" to="../Dashboard" signal="pressed" method="_on_shop_pressed" />
 		<connection from="Dashboard/NavPanel/VBoxContainer/MenuBtn" to="../Dashboard" signal="pressed" method="_on_menu_pressed" />
 	</connections>
 </root_scene>
