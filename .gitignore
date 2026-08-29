@@ -1,5 +1,38 @@
-node_modules/
+```
+# Godot-specific ignores
+*.import
+*.uid
+.project
+*.scn
+*.tscn
+*.tres
+*.res
+*.godot
+
+# Build artifacts
+export_presets.cfg
+
+# Editor
+.vscode/
+.idea/
+
+# Dependencies and cache
+.cache/
+*.cache
+*.tmp
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+```node_modules/
 .next/
 dist/
 build/
-*.log
