@@ -62,15 +62,25 @@ func load_team_data() -> void:
 
 func generate_available_players() -> void:
 	available_players.clear()
-	var world_generator := WorldGenerator.new()
 	
-	for i in range(15):
-		var player := world_generator.generate_player(randi_range(18, 32))
-		player["market_value"] = randi_range(100000, 5000000)
-		player["wage_demand"] = randi_range(5000, 50000)
-		player["club_name"] = ["FC Northland", "United South", "Sporting West", "East City FC"][randi_range(0, 3)]
-		player["contract_years"] = randi_range(1, 4)
-		available_players.append(player)
+	# Get free agents from GameState
+	var free_agents = WorldGenerator.get_free_agents()
+	
+	if free_agents.size() > 0:
+		# Take up to 15 free agents
+		for j in range(min(15, free_agents.size())):
+			var player = free_agents[j].duplicate(true)
+			available_players.append(player)
+	else:
+		# Generate some players if no free agents exist
+		var world_generator := WorldGenerator.new()
+		for j in range(15):
+			var player = world_generator.generate_single_player(1000 + j)
+			player["market_value"] = randi_range(100000, 5000000)
+			player["wage_demand"] = randi_range(5000, 50000)
+			player["club_name"] = "Free Agent"
+			player["contract_years"] = randi_range(1, 4)
+			available_players.append(player)
 
 func update_display() -> void:
 	for child in players_list.get_children():
